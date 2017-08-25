@@ -22,9 +22,9 @@ public class HibernateUtils {
 
 		c.setProperty(AvailableSettings.DIALECT, "org.hibernate.dialect.MySQLDialect");
 		c.setProperty(AvailableSettings.DRIVER, "com.mysql.jdbc.Driver");
-		c.setProperty(AvailableSettings.USER, "root");
-		c.setProperty(AvailableSettings.PASS, "asdasd33");
-		c.setProperty(AvailableSettings.URL, "jdbc:mysql://localhost:3306/desafiojava");
+		c.setProperty(AvailableSettings.USER, System.getenv("CLEARDB_USER"));
+		c.setProperty(AvailableSettings.PASS, System.getenv("CLEARDB_PASSWORD"));
+		c.setProperty(AvailableSettings.URL, System.getenv("CLEARDB_DATABASE_URL"));
 
 		c.setProperty(AvailableSettings.HBM2DDL_AUTO, "update");
 
