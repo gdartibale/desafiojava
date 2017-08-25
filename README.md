@@ -97,9 +97,9 @@ https://desafiojava-gdartibale.herokuapp.com
   * **Code:** 401 UNAUTHORIZED <br />
     **Content:** `{ mensagem : "Usuário e/ou senha inválidos." }`
     
- **Login Usuário**
+ **Consume Usuário**
 ----
-  Realiza o login do usuário
+  Realiza consulta do usuário a partir do token
 
 * **URL**
 
