@@ -1,0 +1,38 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.6.RELEASE")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+
+jar {
+    baseName = 'desafio-java'
+    version =  '0.1.0'
+}
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web")
+    compile('org.hibernate:hibernate-core:4.3.11.Final')
+    compile 'mysql:mysql-connector-java:5.1.31'
+    compile 'org.javassist:javassist:3.15.0-GA'
+    compile 'io.jsonwebtoken:jjwt:0.7.0'
+    compile 'com.fasterxml.jackson.core:jackson-core:2.8.9'
+    compile 'com.google.code.gson:gson:2.8.1'
+    compile 'org.mindrot:jbcrypt:0.3m'
+
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+}
